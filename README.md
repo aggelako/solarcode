@@ -13,6 +13,7 @@ Onoma
 Epwnumo
 AFM
 Xrhmata
+Range eisodhmatos
 isAccepted 
 SolarizationId (an ginei accepted )
 
@@ -35,7 +36,8 @@ Total SpaceAccepted
 Date Accepted
 Stats(applications accepted, space covered, energy produced in 10 yrs)
 
-
+## Xrhmatikes omades
+Enum
 
 
 # Ypologismos aksias xwrou gia ton algorithmo kai gia ta stats
