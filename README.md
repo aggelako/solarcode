@@ -30,7 +30,7 @@ Id
 Onoma 
 Epwnumo
 AFM
-Xrhmata (mporei kai 0)
+Xrhmata
 isAccepted 
 SolarizationId (an ginei accepted )
 
