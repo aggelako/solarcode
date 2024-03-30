@@ -3,8 +3,12 @@ import 'package:solar_app/main.dart';
 import 'package:solar_app/services/ink.dart';
 
 class Applications extends StatelessWidget {
+  final List<Application>
+      applications; // Assuming this list is populated from JSON
+
   const Applications({
     super.key,
+    required this.applications,
   });
 
   @override
@@ -12,11 +16,13 @@ class Applications extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 70, 20, 20),
       child: ListView.builder(
-        itemCount: 20, // Example item count
+        itemCount: applications.length,
         itemBuilder: (context, index) {
-          return const ApplicationCard(
-            money: '20',
-            place: '50',
+          final application = applications[index];
+          return ApplicationCard(
+            money: application.moneyToInvest?.toString() ?? 'N/A',
+            place: application.spaceSize?.toString() ?? 'N/A',
+            // Add more parameters as needed
           );
         },
       ),
@@ -62,7 +68,7 @@ class ApplicationCard extends StatelessWidget {
                             'Investment: $money',
                             textAlign: TextAlign.left,
                             style: const TextStyle(
-                                color: Colors.white, fontSize: 30),
+                                color: Colors.white, fontSize: 20),
                           ),
                           const Padding(
                             padding: EdgeInsets.all(8.0),
@@ -91,7 +97,7 @@ class ApplicationCard extends StatelessWidget {
                             'Surface: $place m\u00B2',
                             textAlign: TextAlign.left,
                             style: const TextStyle(
-                                color: Colors.white, fontSize: 30),
+                                color: Colors.white, fontSize: 20),
                           ),
                         ],
                       ),
@@ -103,6 +109,44 @@ class ApplicationCard extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class Application {
+  final String firstName;
+  final String lastName;
+  final String afm;
+  final int? moneyToInvest;
+  final int incomeRange;
+  final String? street;
+  final int? spaceSize;
+  final bool hasMoney;
+  final bool hasSpace;
+
+  Application({
+    required this.firstName,
+    required this.lastName,
+    required this.afm,
+    this.moneyToInvest,
+    required this.incomeRange,
+    this.street,
+    this.spaceSize,
+    required this.hasMoney,
+    required this.hasSpace,
+  });
+
+  factory Application.fromJson(Map<String, dynamic> json) {
+    return Application(
+      firstName: json['firstName'],
+      lastName: json['lastName'],
+      afm: json['afm'],
+      moneyToInvest: json['moneyToInvest'],
+      incomeRange: json['incomeRange'],
+      street: json['street'],
+      spaceSize: json['spaceSize'],
+      hasMoney: json['hasMoney'],
+      hasSpace: json['hasSpace'],
     );
   }
 }

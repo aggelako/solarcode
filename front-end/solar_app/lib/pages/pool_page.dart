@@ -43,7 +43,7 @@ class PoolPage extends StatelessWidget {
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (builder) => InvestmentSummaryPage()));
+                          builder: (builder) => const InvestmentSummaryPage()));
                     },
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
