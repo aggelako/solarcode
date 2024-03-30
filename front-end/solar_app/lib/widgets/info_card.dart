@@ -35,7 +35,7 @@ class InfoCard extends StatelessWidget {
           ),
           SizedBox(height: 20), // Spacing between title and content
           Text(
-            'Για την τοποθέτηση φωτοβολταικών σε 500m\u00B2 χρειάζονται 100.000€',
+            'For the installation of photovoltaics on 500m², 100,000€ are needed.',
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,

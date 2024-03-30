@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solar_app/main.dart';
+import 'package:solar_app/pages/citizen_form_page.dart';
 import 'package:solar_app/pages/dashboard.dart';
 
 class LoginButton extends StatelessWidget {
@@ -15,7 +16,7 @@ class LoginButton extends StatelessWidget {
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (builder) => const Dashboard(),
+              builder: (builder) => CitizenForm(),
             ),
           );
         },
@@ -35,7 +36,7 @@ class LoginButton extends StatelessWidget {
         child: const Padding(
           padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
           child: Text(
-            'Σύνδεση',
+            'Log in',
             style: TextStyle(
               fontSize: 18,
               color: Colors.white,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:solar_app/main.dart';
 
+import '../pages/dashboard.dart';
+
 class TaxisnetButton extends StatelessWidget {
   const TaxisnetButton({
     super.key,
@@ -11,7 +13,13 @@ class TaxisnetButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (builder) => const Dashboard(),
+            ),
+          );
+        },
         style: ButtonStyle(
           elevation: MaterialStateProperty.all(0),
           padding: MaterialStateProperty.all(
@@ -28,7 +36,7 @@ class TaxisnetButton extends StatelessWidget {
         child: const Padding(
           padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
           child: Text(
-            'Σύνδεση με TaxisNet',
+            'Log in as admin',
             style: TextStyle(
               fontSize: 18,
               color: Colors.white,

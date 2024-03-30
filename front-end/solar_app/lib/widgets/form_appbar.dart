@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../main.dart';
 
-class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const DashboardAppBar({
+class FormAppbar extends StatelessWidget implements PreferredSizeWidget {
+  const FormAppbar({
     super.key,
   });
 
@@ -11,8 +11,9 @@ class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       iconTheme: const IconThemeData(color: Colors.white),
+      automaticallyImplyLeading: false,
       title: const Text(
-        'Solarization Dashboard',
+        'Solarization Form',
         style: TextStyle(
           fontSize: 30,
           fontWeight: FontWeight.w300,

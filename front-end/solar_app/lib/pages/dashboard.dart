@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:solar_app/main.dart';
-import 'package:solar_app/pages/citizen_applications_page.dart';
 import 'package:solar_app/pages/map_page.dart';
 import 'package:solar_app/pages/pool_page.dart';
 
@@ -17,9 +15,8 @@ class DashboardState extends State<Dashboard> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const PoolPage(),
     const MapPage(),
-    const CitizenApplicationsPage(),
+    const PoolPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -53,10 +50,6 @@ class DashboardState extends State<Dashboard> {
             ListTile(
               title: const Text('Pools'),
               onTap: () => _onItemTapped(1),
-            ),
-            ListTile(
-              title: const Text('Applications'),
-              onTap: () => _onItemTapped(2),
             ),
           ],
         ),

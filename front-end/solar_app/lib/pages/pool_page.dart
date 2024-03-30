@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../main.dart';
 import '../widgets/pools.dart';
+import 'result_page.dart';
 
 class PoolPage extends StatelessWidget {
   const PoolPage({super.key});
@@ -40,7 +41,10 @@ class PoolPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (builder) => InvestmentSummaryPage()));
+                    },
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
                       child: Text(
