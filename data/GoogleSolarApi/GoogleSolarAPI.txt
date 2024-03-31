@@ -1,0 +1,21 @@
+Solar API overview
+
+The Google Maps Platform Solar API is a service focused on helping accelerate solar and energy system installations. The Solar API makes detailed rooftop data based on Google's expansive mapping and computing resources available to help estimate renewable rooftop solar energy potential and savings.
+
+Why use the Solar API
+The API accepts requests for three endpoints:
+
+buildingInsights: This service endpoint returns insights about the location, dimensions, and solar potential of a building.
+
+dataLayers: This service endpoint returns URLs for raw solar information datasets for an area surrounding a location.
+
+geoTiff: This endpoint fetches rasters with encoded solar information, including a digital surface model, an aerial image, annual and monthly flux maps, and hourly shade.
+
+This data can help users:
+
+Remotely design a solar power system
+Reduce solar site assessment time
+Prioritize installation locations
+Create more accurate proposals
+Increase customer conversion rates
+Provide insightful details to educate consumers
